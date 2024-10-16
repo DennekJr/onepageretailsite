@@ -1,0 +1,58 @@
+.service-content a::before,
+.service-content a::after {
+    content: "";
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 30px;
+    background: #6e6e6e;
+    transition: .5s;
+    opacity: 1;
+}
+
+.service-content a::after {
+    left: -40px;
+    right: unset;
+    opacity: 0;
+}
+
+.single-service:hover a::before {
+    right: -60px;
+    opacity: 0;
+}
+
+.single-service:hover .service-content a::after {
+    left: 0;
+    opacity: 1;
+    background: #fff;
+}
+
+.single-service:hover .service-content a {
+    padding-left: 50px;
+    color: #fff;
+}
+
+.service-content a {
+    color: #212529;
+    position: relative;
+    transition: .5s;
+}
+
+
+.services-icon,
+.service-content h5,
+.service-content .content {
+    transition: .3s;
+}
+
+
+.single-service:hover h5,
+.single-service:hover .content {
+    color: #fff;
+}
+
+.single-service:hover .services-icon {
+    color: #02a2c4;
+}

@@ -6,13 +6,15 @@ import { Box } from "@mui/system";
 import NavBar from "@/app/(home)/components/NavBar";
 import { Hero } from "@/app/(home)/components/Hero";
 import { Features } from "@/app/(home)/components/features";
+import Services from "@/app/(home)/components/services";
 
 export default function Home() {
   return (
-    <Box sx={{ flexGrow: 1, overflow: "hidden" }}>
+    <Box sx={{ flexGrow: 1, overflow: "hidden" }} className={"bg-white"}>
       <NavBar />
       <Hero />
       <Features />
+      <Services />
     </Box>
   );
 }
