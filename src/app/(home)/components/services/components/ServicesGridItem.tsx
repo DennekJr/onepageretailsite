@@ -1,7 +1,7 @@
 import { Box } from "@mui/system";
 import { ServicesGridTypes } from "@/app/(home)/components/services/services.types";
 import { Typography } from "@mui/material";
-import "./serviceGridItem.css";
+import "./serviceGridItem.styles.css";
 
 export const ServicesGridItem = ({ item }: { item: ServicesGridTypes }) => {
   return (

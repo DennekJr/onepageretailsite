@@ -7,6 +7,8 @@ import NavBar from "@/app/(home)/components/NavBar";
 import { Hero } from "@/app/(home)/components/Hero";
 import { Features } from "@/app/(home)/components/features";
 import Services from "@/app/(home)/components/services";
+import { CreativeWork } from "@/app/(home)/components/CreativeWork";
+import { OurTeam } from "@/app/(home)/components/OurTeam";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
       <Hero />
       <Features />
       <Services />
+      <CreativeWork />
+      <OurTeam />
     </Box>
   );
 }
