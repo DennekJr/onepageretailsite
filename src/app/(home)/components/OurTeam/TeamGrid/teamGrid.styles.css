@@ -28,10 +28,6 @@
 }
 
 .teamBox .innerBox:hover .socialLinks a {
-    -webkit-transition: transform 0.3s ease 0.6s, opacity 0.3s ease 0.6s, color 0.3s linear;
-    -moz-transition: transform 0.3s ease 0.6s, opacity 0.3s ease 0.6s, color 0.3s linear;
-    -ms-transition: transform 0.3s ease 0.6s, opacity 0.3s ease 0.6s, color 0.3s linear;
-    -o-transition: transform 0.3s ease 0.6s, opacity 0.3s ease 0.6s, color 0.3s linear;
     transition: transform 0.3s ease 0.6s, opacity 0.3s ease 0.6s, color 0.3s linear;
 }
 
@@ -111,4 +107,27 @@
 
 .imageBox img {
     width: -webkit-fill-available !important;
+}
+
+.aboutImage img {
+    max-width: 95%;
+}
+
+.container #counter-area {
+    position: relative;
+    padding: 30px 0;
+}
+
+@media (min-width: 992px) {
+    .col-lg-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }

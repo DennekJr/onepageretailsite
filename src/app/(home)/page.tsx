@@ -9,6 +9,7 @@ import { Features } from "@/app/(home)/components/features";
 import Services from "@/app/(home)/components/services";
 import { CreativeWork } from "@/app/(home)/components/CreativeWork";
 import { OurTeam } from "@/app/(home)/components/OurTeam";
+import { AboutUs } from "@/app/(home)/components/AboutUs";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Services />
       <CreativeWork />
       <OurTeam />
+      <AboutUs />
     </Box>
   );
 }
