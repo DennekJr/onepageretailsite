@@ -1,6 +1,6 @@
 import { Box } from "@mui/system";
-import { Heading } from "@/app/components/SectionsContainer";
-import { TeamGrid } from "@/app/(home)/components/OurTeam/TeamGrid";
+import { Heading } from "../../../components/SectionsContainer";
+import { TeamGrid } from "./TeamGrid";
 
 export const OurTeam = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
 import { Box } from "@mui/system";
-import { Heading } from "@/app/components/SectionsContainer";
+import { Heading } from "../../../components/SectionsContainer";
 import { PriceCards } from "./PriceCard";
-import './ourPrice.styles.css';
+import "./ourPrice.styles.css";
 
 export const OurPrice = () => {
   return (

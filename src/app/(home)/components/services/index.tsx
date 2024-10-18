@@ -1,8 +1,8 @@
 import { Box } from "@mui/system";
 import { Heading } from "@/app/components/SectionsContainer";
 import { useMemo } from "react";
-import { SERVICESGRIDMENU } from "@/app/(home)/components/services/services.constants";
-import { ServicesGridItem } from "@/app/(home)/components/services/components/ServicesGridItem";
+import { SERVICESGRIDMENU } from "./services.constants";
+import { ServicesGridItem } from "./components/ServicesGridItem";
 
 const Services = () => {
   const offeredServices = useMemo(() => Object.values(SERVICESGRIDMENU), []);

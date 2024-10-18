@@ -1,8 +1,8 @@
 import { Box } from "@mui/system";
-import { Heading } from "@/app/components/SectionsContainer";
+import { Heading } from "../../../components/SectionsContainer";
 import { useMemo } from "react";
-import { FEATURESGRIDMENU } from "@/app/(home)/components/features/features.constants";
-import { FeaturesGridItem } from "@/app/(home)/components/features/components/FeaturesGridItem";
+import { FEATURESGRIDMENU } from "../../components/features/features.constants";
+import { FeaturesGridItem } from "../../components/features/components/FeaturesGridItem";
 
 export const Features = () => {
   const features = useMemo(() => Object.values(FEATURESGRIDMENU), []);

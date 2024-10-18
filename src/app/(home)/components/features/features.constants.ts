@@ -1,4 +1,4 @@
-import { FeaturesGridTypes } from "@/app/(home)/components/features/features.types";
+import { FeaturesGridTypes } from "./features.types";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 
 export const FEATURESGRIDMENU: Record<string, FeaturesGridTypes> = {

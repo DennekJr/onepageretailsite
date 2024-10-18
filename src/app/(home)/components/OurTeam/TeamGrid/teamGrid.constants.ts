@@ -1,4 +1,4 @@
-import { TeamGridTypes } from "@/app/(home)/components/OurTeam/TeamGrid/teamGrid.types";
+import { TeamGridTypes } from "./teamGrid.types";
 
 export const TEAMGRIDMENU: Record<string, TeamGridTypes> = {
   one: {

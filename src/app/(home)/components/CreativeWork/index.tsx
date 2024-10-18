@@ -1,6 +1,6 @@
 import { Box } from "@mui/system";
-import { Heading } from "@/app/components/SectionsContainer";
-import { Departments } from "@/app/(home)/components/CreativeWork/Departments";
+import { Heading } from "../../../components/SectionsContainer";
+import { Departments } from "../../components/CreativeWork/Departments";
 
 export const CreativeWork = () => {
   return (

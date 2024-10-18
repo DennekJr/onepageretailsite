@@ -1,6 +1,6 @@
 import { Box } from "@mui/system";
 import { useMemo } from "react";
-import { TEAMGRIDMENU } from "@/app/(home)/components/OurTeam/TeamGrid/teamGrid.constants";
+import { TEAMGRIDMENU } from "./teamGrid.constants";
 import Image from "next/image";
 import { Facebook, LinkedIn, Pinterest, Twitter } from "@mui/icons-material";
 import "./teamGrid.styles.css";

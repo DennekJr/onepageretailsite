@@ -2,7 +2,7 @@ import { Box } from "@mui/system";
 import Image from "next/image";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import Link from "next/link";
-import { DepartmentGridItemTypes } from "@/app/(home)/components/CreativeWork/Departments/DepartmentGridItem/departmentGridItem.types";
+import { DepartmentGridItemTypes } from "./departmentGridItem.types";
 import "./departmentGridItem.styles.css";
 
 export const DepartmentGridItem = ({

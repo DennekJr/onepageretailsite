@@ -3,14 +3,14 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { Box } from "@mui/system";
-import NavBar from "@/app/(home)/components/NavBar";
-import { Hero } from "@/app/(home)/components/Hero";
-import { Features } from "@/app/(home)/components/features";
-import Services from "@/app/(home)/components/services";
-import { CreativeWork } from "@/app/(home)/components/CreativeWork";
-import { OurTeam } from "@/app/(home)/components/OurTeam";
-import { AboutUs } from "@/app/(home)/components/AboutUs";
-import { OurPrice } from "@/app/(home)/components/OurPrice";
+import NavBar from "./components/NavBar";
+import { Hero } from "./components/Hero";
+import { Features } from "./components/features";
+import Services from "./components/services";
+import { CreativeWork } from "./components/CreativeWork";
+import { OurTeam } from "./components/OurTeam";
+import { AboutUs } from "./components/AboutUs";
+import { OurPrice } from "./components/OurPrice";
 
 export default function Home() {
   return (

@@ -4,7 +4,7 @@ import { Box } from "@mui/system";
 import { useRouter, usePathname } from "next/navigation";
 import { useWindowSize } from "@/app/hooks/useWindowSize";
 import Link from "next/link";
-import { NAV_MENU } from "@/app/(home)/components/NavBar/navbar.constants";
+import { NAV_MENU } from "./navbar.constants";
 import Image from "next/image";
 import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import { MenuDialog } from "../MenuDialog";
