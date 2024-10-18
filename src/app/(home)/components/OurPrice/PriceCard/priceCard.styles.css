@@ -1,0 +1,87 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.front h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #313e4b;
+    margin: 0 0 20px;
+}
+
+.front h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #02a2c4;
+}
+
+.front p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    margin: 0;
+    color: #727f8c;
+    margin-top: 20px;
+}
+
+@media (min-width: 992px) {
+    .itemContainer {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.itemContainer {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.card {
+    visibility: visible;
+    animation-name: fadeInLeft;
+    position: relative;
+    box-shadow: 1px 1px 40px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.front {
+    padding: 50px 40px;
+    backface-visibility: hidden;
+    transform: perspective(600px) rotateY(0deg);
+    transition: transform 0.6s linear;
+}
+
+.front ul {
+    padding: 0;
+    margin: 20px 0;
+}
+
+.front li {
+    list-style: none;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px 0;
+    color: #5d6b79;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.button {
+    background: linear-gradient(135deg, rgba(2, 166, 199, 1) 0%, rgba(3, 127, 152, 1) 100%);
+    box-shadow: 3px 3px 51px 0 rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    padding: 15px 50px;
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.button:hover {
+    transform: translateY(-7px);
+}

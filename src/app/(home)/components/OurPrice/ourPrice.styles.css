@@ -1,0 +1,32 @@
+.priceBodyConatiner {
+    text-align: center !important;
+}
+
+@media (min-width: 1200px) {
+    .priceBodyConatiner {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .priceBodyConatiner {
+        max-width: 960px;
+    }
+}
+@media (max-width: 768px) {
+    .priceBodyConatiner {
+        max-width: 720px;
+    }
+}
+@media (max-width: 576px) {
+    .priceBodyConatiner {
+        max-width: 540px;
+    }
+}
+.priceBodyConatiner {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
