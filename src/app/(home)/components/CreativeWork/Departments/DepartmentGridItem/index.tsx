@@ -3,7 +3,7 @@ import Image from "next/image";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import Link from "next/link";
 import { DepartmentGridItemTypes } from "./departmentGridItem.types";
-import "./departmentGridItem.styles.css";
+import "./departmentGridItem.module.css";
 
 export const DepartmentGridItem = ({
   src,
@@ -13,7 +13,7 @@ export const DepartmentGridItem = ({
   filterGroup,
 }: DepartmentGridItemTypes) => {
   return (
-    <Box className={"itemContainer " + filterGroup}>
+    <Box className={"departmentItemContainer " + filterGroup}>
       <Box className={"portfolioItem"}>
         <Image alt={alt} src={src} width={267} height={267} />
         <Box className={"overlay text-center"}>
