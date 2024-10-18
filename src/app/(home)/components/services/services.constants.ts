@@ -1,4 +1,3 @@
-import { FeaturesGridTypes } from "@/app/(home)/components/features/features.types";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import { ServicesGridTypes } from "@/app/(home)/components/services/services.types";
 
