@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { Box } from "@mui/system";
 import { useRouter, usePathname } from "next/navigation";
 import { useWindowSize } from "@/app/hooks/useWindowSize";
@@ -13,7 +13,6 @@ export default function NavBar() {
   const router = useRouter();
   const path = usePathname();
   const windowSize = useWindowSize();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const navBarItems = useMemo(() => Object.values(NAV_MENU), []);
   const width = useMemo(() => {
     return windowSize;
@@ -27,7 +26,8 @@ export default function NavBar() {
   return (
     <Box
       className={
-        " !bg-[#000000] flex justify-center bg-transparent w-full p-4 text-white z-10 static lg:absolute top-0 left-0"
+        `${path == "/" ? "!bg-transparent " : "!bg-[#000000] "}` +
+        "flex justify-center bg-transparent w-full p-4 text-white z-10 static lg:absolute top-0 left-0"
       }
     >
       <Box
