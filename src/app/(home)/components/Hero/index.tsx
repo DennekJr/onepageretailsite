@@ -7,14 +7,7 @@ export const Hero = () => {
         "slider before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:opacity-0 before:text-center before:-z-10 text-center d-flex align-items-center"
       }
     >
-      <Box id="particles-js">
-        <canvas
-          className="particles-js-canvas-el"
-          style={{ width: "100%", height: "100%" }}
-          width="2084"
-          height="2174"
-        ></canvas>
-      </Box>
+    
       <Box className="container text-white">
         <div className="content">
           <span>Welcome to</span>

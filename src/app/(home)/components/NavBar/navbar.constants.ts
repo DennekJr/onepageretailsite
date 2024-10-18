@@ -14,13 +14,6 @@ export const NAV_MENU: Record<string, NavBarItem> = {
     name: "Services",
     disabled: false,
   },
-  exhibitors: {
-    id: "exhibitors",
-    route: "exhibit",
-    name: "Exhibitors",
-    icon: ExpandMoreIcon,
-    disabled: false,
-  },
   portfolio: {
     id: "portfolio",
     route: "portfolio",
@@ -49,21 +42,6 @@ contact: {
     id: "contact",
     route: "#contact",
     name: "Contact",
-    disabled: false,
-  },
-};
-
-export const NAV_BUTTONS: Record<string, NavBarItem> = {
-  getTicket: {
-    id: "getTicket",
-    route: "ticket",
-    name: "Get Ticket",
-    disabled: false,
-  },
-  becomeASponsor: {
-    id: "becomeASponsor",
-    route: "sponsor",
-    name: "Become A Sponsor",
     disabled: false,
   },
 };
