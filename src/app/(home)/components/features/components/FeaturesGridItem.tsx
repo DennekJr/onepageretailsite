@@ -1,5 +1,6 @@
 import { Box } from "@mui/system";
 import { FeaturesGridTypes } from "../features.types";
+import "../feature.styles.css";
 
 export const FeaturesGridItem = ({ item }: { item: FeaturesGridTypes }) => {
   return (
@@ -8,7 +9,7 @@ export const FeaturesGridItem = ({ item }: { item: FeaturesGridTypes }) => {
         className="feature-block wow fadeInUp mb-[40px]"
         style={{ visibility: "visible", animationName: "fadeIn" }}
       >
-        <Box className="inner-box relative px-[20px] pt-[35px] pb-[30px] shadow-[0px_2px_8px_rgba(0,0,0,.1)] bg-white">
+        <Box className="innerBox relative px-[20px] pt-[35px] pb-[30px] shadow-[0px_2px_8px_rgba(0,0,0,.1)] bg-white">
           <item.icon />
           <h3
             className={

@@ -11,6 +11,9 @@ import { CreativeWork } from "./components/CreativeWork";
 import { OurTeam } from "./components/OurTeam";
 import { AboutUs } from "./components/AboutUs";
 import { OurPrice } from "./components/OurPrice";
+import { WhyChooseUs } from "@/app/(home)/components/WhyChooseUs";
+import { Contact } from "@/app/(home)/components/Contact";
+import { Footer } from "@/app/(home)/components/Footer";
 
 export default function Home() {
   return (
@@ -23,6 +26,9 @@ export default function Home() {
       <OurTeam />
       <AboutUs />
       <OurPrice />
+      <WhyChooseUs />
+      <Contact />
+      <Footer />
     </Box>
   );
 }

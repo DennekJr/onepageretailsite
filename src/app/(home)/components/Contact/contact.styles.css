@@ -1,0 +1,137 @@
+.contactUs {
+    background: url("/images/footerBg.webp") center center no-repeat;
+    background-size: cover;
+    padding: 120px 0;
+    z-index: 9;
+    position: relative;
+}
+
+.contactUs .contactContainer p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.contactUs:before {
+    background: #2a3647;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.93;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.contactContainer {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contactRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-sm-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.contactRow .formControl {
+    padding: 25px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    background: #ffffff;
+    border: 0;
+    border-radius: 0px;
+}
+
+.formControl {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.formControl:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+
+.formGroup .formControl {
+    height: auto;
+}
+
+.formButton {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.formButton {
+    width: 100%;
+    background: linear-gradient(to top left, #079ab9 0%, #037e98 100%);
+}
+
+.formButton {
+    box-shadow: 0 15px 51px 0 rgba(0, 0, 0, 0.24);
+    padding: 10px 45px;
+    border-radius: 45px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.4s ease-in-out;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+@media (min-width: 768px) {
+    .contactFormContainer {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-left: 25%;
+    }
+}
+
+@media (min-width: 576px) {
+    .col-sm-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

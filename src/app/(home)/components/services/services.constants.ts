@@ -29,4 +29,31 @@ export const SERVICESGRIDMENU: Record<string, ServicesGridTypes> = {
       "                  typesetting industry. printing and typesetting.",
     icon: InsertDriveFileIcon,
   },
+  four: {
+    id: "features",
+    title: "Features",
+    readMoreHref: "/",
+    body:
+      "Lorem Ipsum is simply dummy text of the printing and\n" +
+      "                  typesetting industry. printing and typesetting.",
+    icon: InsertDriveFileIcon,
+  },
+  five: {
+    id: "features",
+    title: "Features",
+    readMoreHref: "/",
+    body:
+      "Lorem Ipsum is simply dummy text of the printing and\n" +
+      "                  typesetting industry. printing and typesetting.",
+    icon: InsertDriveFileIcon,
+  },
+  six: {
+    id: "features",
+    title: "Features",
+    readMoreHref: "/",
+    body:
+      "Lorem Ipsum is simply dummy text of the printing and\n" +
+      "                  typesetting industry. printing and typesetting.",
+    icon: InsertDriveFileIcon,
+  },
 };
