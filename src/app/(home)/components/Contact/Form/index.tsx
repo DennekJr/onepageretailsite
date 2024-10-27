@@ -15,7 +15,7 @@ export const ContactForm = () => {
       <div className="formGroup mb-4">
         <textarea
           className="formControl"
-          rows="5"
+          rows={5}
           id="comment"
           placeholder="Message"
         ></textarea>
