@@ -1,0 +1,65 @@
+.itemContainer {
+    padding: 0;
+    height: fit-content;
+}
+
+.portfolioItem {
+    position: relative;
+    padding: 0;
+
+}
+
+.portfolioItem:hover .employeeContentOverlay {
+    opacity: 0.95;
+}
+
+.portfolioItem:hover .employeeContent {
+    opacity: 1;
+}
+
+.portfolioItem img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.employeeContentOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #2a3647;
+    color: #fff;
+    opacity: 0.6;
+    transition: all 0.7s ease-in-out;
+}
+
+.employeeContent {
+    font-size: 20px;
+    position: absolute;
+    text-decoration: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.employeeContent p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #eee;
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.employeeContentOverlay a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
