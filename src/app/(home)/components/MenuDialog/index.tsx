@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     right: 0,
     margin: 0,
     minWidth: "100vw",
-    background: "hsl(270 10% 4%)",
+    background: "#232834",
   },
 });
 const Transition = React.forwardRef(function Transition(
@@ -74,11 +74,11 @@ export const MenuDialog = () => {
         onClose={handleClose}
         TransitionComponent={Transition}
       >
-        <Box className={"float-right"}>
+        <Box className={"float-right bg-transparent"}>
           <IconButton
             edge="start"
             color="inherit"
-            className={"float-right"}
+            className={"float-right text-[#fff]"}
             onClick={handleClose}
             aria-label="close"
           >
@@ -100,6 +100,7 @@ export const MenuDialog = () => {
                     primaryTypographyProps={{
                       fontWeight: "600",
                       fontSize: "1.5rem",
+                      color: "#fff",
                     }}
                     className={"itemText !m-0 py-4"}
                   />

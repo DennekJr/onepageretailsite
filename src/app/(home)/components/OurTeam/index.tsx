@@ -1,8 +1,18 @@
+"use client";
 import { Box } from "@mui/system";
 import { Heading } from "../../../components/SectionsContainer";
 import { TeamGrid } from "./TeamGrid";
+import { useEffect, useState } from "react";
+import { getComponentData } from "@/app/(home)/utils";
 
 export const OurTeam = () => {
+  const [data, setData] = useState();
+  useEffect(() => {
+    getComponentData("our-team").then((componentData) => {
+      setData(componentData.data);
+    });
+  }, []);
+  if (data === undefined) return;
   return (
     <Box
       className={
@@ -11,14 +21,11 @@ export const OurTeam = () => {
     >
       {" "}
       <Heading
-        title={"Our"}
-        blueTitle={"Team"}
-        body={
-          "Lorem Ipsum is simply dummy text of the printing and type setting industry\n" +
-          "        when an unknown printer took "
-        }
+        title={data.title}
+        blueTitle={data.blueTitle}
+        body={data.content}
       />
-      <TeamGrid />
+      <TeamGrid team={data.teamMembers} />
     </Box>
   );
 };

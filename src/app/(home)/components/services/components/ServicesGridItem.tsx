@@ -1,8 +1,17 @@
 import { Box } from "@mui/system";
-import { ServicesGridTypes } from "@/app/(home)/components/services/services.types";
 import "./serviceGridItem.styles.css";
+import { OverridableComponent } from "@mui/types";
+import { SvgIconTypeMap } from "@mui/material";
+import * as Icons from "@mui/icons-material";
 
-export const ServicesGridItem = ({ item }: { item: ServicesGridTypes }) => {
+export const ServicesGridItem = ({
+  item,
+}: {
+  item: { title: string; content: string; icon: string; readMoreHref: string };
+}) => {
+  const iconMap = { ...Icons };
+  const IconComponent: OverridableComponent<SvgIconTypeMap> =
+    iconMap[`${item.icon}`];
   return (
     <Box className="serviceItem text-black hover:text-[#fff]]">
       <Box
@@ -14,11 +23,11 @@ export const ServicesGridItem = ({ item }: { item: ServicesGridTypes }) => {
             "services-icon mb-[25px] w-[70px] h-[70px] rounded-full bg-[#02a2c4] group-hover:bg-[#fff] flex items-center justify-center"
           }
         >
-          <item.icon />
+          <IconComponent />
         </Box>
         <Box className={"service-content"}>
           <h5 className={"text-[20px] mb-[10px]"}>{item.title}</h5>
-          <p className={"mt-0 mb-4"}>{item.body}</p>
+          <p className={"mt-0 mb-4"}>{item.content}</p>
           <a href={item.readMoreHref}>Read More</a>
         </Box>
       </Box>

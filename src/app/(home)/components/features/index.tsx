@@ -1,11 +1,18 @@
+"use client";
 import { Box } from "@mui/system";
 import { Heading } from "../../../components/SectionsContainer";
-import { useMemo } from "react";
-import { FEATURESGRIDMENU } from "../../components/features/features.constants";
+import { useEffect, useState } from "react";
 import { FeaturesGridItem } from "../../components/features/components/FeaturesGridItem";
+import { getComponentData } from "@/app/(home)/utils";
 
 export const Features = () => {
-  const features = useMemo(() => Object.values(FEATURESGRIDMENU), []);
+  const [data, setData] = useState();
+  useEffect(() => {
+    getComponentData("feature").then((componentData) => {
+      setData(componentData.data);
+    });
+  }, []);
+  if (data === undefined) return;
   return (
     <section className={"py-[120px] bg-[#f8f8f8]"}>
       <Box
@@ -14,17 +21,12 @@ export const Features = () => {
         }
       >
         <Heading
-          title={"Features Our"}
-          blueTitle={"Probox"}
-          body={
-            "Lorem Ipsum is simply dummy text of the printing and typesetting\n" +
-            "            industry. Lorem Ipsum has been the industrys standard dummy text\n" +
-            "            ever since the 1500s, when an unknown printer took a galley of type\n" +
-            "            and scrambled it to make a type specimen book"
-          }
+          title={data.title}
+          blueTitle={data.blueTitle}
+          body={data.subtitle}
         />
         <Box className={"row flex flex-wrap mx-[-15px]"}>
-          {features.map((featureItem, index) => (
+          {data.featureBlocks.map((featureItem, index) => (
             <FeaturesGridItem key={index} item={featureItem} />
           ))}
         </Box>

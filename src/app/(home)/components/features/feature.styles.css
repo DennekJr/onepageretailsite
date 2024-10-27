@@ -50,3 +50,13 @@
     border-left: 1px solid #02a2c4;
     border-right: 1px solid #02a2c4;
 }
+
+.iconComponent {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: 400;
+    color: #02a2c4;
+}

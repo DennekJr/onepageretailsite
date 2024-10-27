@@ -1,8 +1,19 @@
+"use client";
 import { Box } from "@mui/system";
 import { Heading } from "../../../components/SectionsContainer";
 import { Departments } from "../../components/CreativeWork/Departments";
+import { useEffect, useState } from "react";
+import { getComponentData } from "@/app/(home)/utils";
 
 export const CreativeWork = () => {
+  const [data, setData] = useState();
+  useEffect(() => {
+    getComponentData("creative-work").then((componentData) => {
+      console.log(componentData.data);
+      setData(componentData.data);
+    });
+  }, []);
+  if (data === undefined) return;
   return (
     <Box
       className={
@@ -18,7 +29,7 @@ export const CreativeWork = () => {
           "        not only five centuries."
         }
       />
-      <Departments />
+      <Departments data={data} />
     </Box>
   );
 };

@@ -23,7 +23,7 @@
     max-width: 100%;
 }
 
-.navGroup {
+.departmentsNavGroup {
     margin-bottom: 40px !important;
     background: #ffffff;
     padding: 5px 10px;
@@ -34,7 +34,7 @@
     width: fit-content;
 }
 
-.navGroup button {
+.departmentsNavGroup button {
     border: 0;
     background: transparent;
     font-size: 14px;
@@ -44,6 +44,11 @@
     cursor: pointer;
     padding: 10px 20px;
     transition: all 0.2s ease-in
+}
+
+.departmentsNavGroup button:hover {
+    color: #ffffff;
+    background: #02a2c4;
 }
 
 .departmentsGrid {

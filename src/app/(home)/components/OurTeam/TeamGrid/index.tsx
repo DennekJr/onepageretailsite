@@ -1,19 +1,17 @@
 import { Box } from "@mui/system";
-import { useMemo } from "react";
-import { TEAMGRIDMENU } from "./teamGrid.constants";
 import Image from "next/image";
 import { Facebook, LinkedIn, Pinterest, Twitter } from "@mui/icons-material";
 import "./teamGrid.styles.css";
+import { TeamGridTypes } from "@/app/(home)/components/OurTeam/TeamGrid/teamGrid.types";
 
-export const TeamGrid = () => {
-  const team = useMemo(() => Object.values(TEAMGRIDMENU), []);
+export const TeamGrid = ({ team }: { team: TeamGridTypes[] }) => {
   return (
-    <Box className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"}>
+    <Box className={"row"}>
       {team.map((teamMember, index) => {
         return (
           <Box key={index} className={"teamBlock"}>
             <Box className={"teamBox"}>
-              <Box className={"innerBox"}>
+              <Box className={"teamInnerBox"}>
                 <Box className={"imageBox"}>
                   <figure>
                     <Image
@@ -33,13 +31,13 @@ export const TeamGrid = () => {
                     <div className="socialLinks">
                       <a href={teamMember.facebook}>
                         <Facebook />
-                      </a>{" "}
+                      </a>
                       <a href={teamMember.twitter}>
                         <Twitter />
-                      </a>{" "}
+                      </a>
                       <a href={teamMember.pinterest}>
                         <Pinterest />
-                      </a>{" "}
+                      </a>
                       <a href={teamMember.linkedin}>
                         <LinkedIn />
                       </a>

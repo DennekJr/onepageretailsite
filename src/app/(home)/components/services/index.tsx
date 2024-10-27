@@ -1,11 +1,18 @@
+"use client";
 import { Box } from "@mui/system";
 import { Heading } from "@/app/components/SectionsContainer";
-import { useMemo } from "react";
-import { SERVICESGRIDMENU } from "./services.constants";
-import { ServicesGridItem } from "./components/ServicesGridItem";
+import { useEffect, useState } from "react";
+import { getComponentData } from "@/app/(home)/utils";
+import { ServicesGridItem } from "@/app/(home)/components/services/components/ServicesGridItem";
 
 const Services = () => {
-  const offeredServices = useMemo(() => Object.values(SERVICESGRIDMENU), []);
+  const [data, setData] = useState();
+  useEffect(() => {
+    getComponentData("our-service").then((componentData) => {
+      setData(componentData.data);
+    });
+  }, []);
+  if (data === undefined) return;
   return (
     <section className={"py-[120px] bg-[#fff]"}>
       <Box
@@ -14,16 +21,12 @@ const Services = () => {
         }
       >
         <Heading
-          title={"Our "}
-          blueTitle={"Services"}
-          body={
-            "Lorem Ipsum is simply dummy text of the printing and type setting industry\n\n" +
-            "        a galley of type and scrambled it to make a type specimen book It has survived\n" +
-            "        not only five centuries."
-          }
+          title={data.title}
+          blueTitle={data.blueTitle}
+          body={data.content}
         />
         <Box className={"row flex flex-wrap mx-[-15px]"}>
-          {offeredServices.map((featureItem, index) => (
+          {data.services.map((featureItem, index) => (
             <ServicesGridItem key={index} item={featureItem} />
           ))}
         </Box>

@@ -2,20 +2,24 @@
 import { Box } from "@mui/system";
 import "./departments.styles.css";
 import { useMemo, useState } from "react";
-import { DEPARTMENTSMENU } from "../Departments/departments.constants";
 import { DepartmentGridItem } from "../Departments/DepartmentGridItem";
-import { EMPLOYEEMENU } from "../Departments/DepartmentGridItem/departmentGridItem.constants";
+import { DepartmentGridItemTypes } from "@/app/(home)/components/CreativeWork/Departments/DepartmentGridItem/departmentGridItem.types";
 
-export const Departments = () => {
+export const Departments = ({
+  data,
+}: {
+  data: {
+    departments: { id: string; name: string; filter: string }[];
+    employees: DepartmentGridItemTypes[];
+  };
+}) => {
   const [filter, setFilter] = useState("*");
-  const departments = useMemo(() => Object.values(DEPARTMENTSMENU), [filter]);
+  const departments = useMemo(() => data.departments, [filter]);
   const employees = useMemo(() => {
     if (filter === "*") {
-      return Object.values(EMPLOYEEMENU);
+      return data.employees;
     }
-    return Object.values(EMPLOYEEMENU).filter((item) =>
-      item.filterGroup.includes(filter),
-    );
+    return data.employees.filter((item) => item.filterGroup.includes(filter));
   }, [filter]);
   const handleFilter = (filter: string) => {
     setFilter(filter);
@@ -25,7 +29,7 @@ export const Departments = () => {
     <Box className={"container"}>
       <Box className="departmentBarRow">
         <Box className={"col"}>
-          <div className={"navGroup !text-center m-auto"}>
+          <div className={"departmentsNavGroup !text-center m-auto"}>
             {departments.map((department, index) => (
               <button
                 key={index}
