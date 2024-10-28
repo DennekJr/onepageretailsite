@@ -2,12 +2,19 @@
 import { Box } from "@mui/system";
 import "./hero.styles.css";
 import { useEffect, useState } from "react";
-import { getComponentData } from "@/app/(home)/utils";
+import { ComponentDataBAseType, getComponentData } from "@/app/(home)/utils";
+
+interface HeroData extends ComponentDataBAseType {
+  title: string;
+  subtitle: string;
+  subtitle2: string;
+}
 
 export const Hero = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState<HeroData>();
   useEffect(() => {
     getComponentData("hero").then((componentData) => {
+      console.log("hero", componentData);
       setData(componentData.data);
     });
   }, []);
