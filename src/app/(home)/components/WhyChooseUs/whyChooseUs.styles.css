@@ -56,6 +56,13 @@
     background: #f8f8f8;
 }
 
+.right h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #313e4b;
+    margin: 0;
+}
+
 .content {
     padding: 80px 50px;
 }
@@ -141,4 +148,17 @@
 
 .reasonBox:hover .reasonBoxIcon {
     background: #ffffff;
+}
+
+.segment {
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .segment {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }

@@ -1,13 +1,15 @@
 import { Box } from "@mui/material";
-import { PRICECARDMENU } from "./priceCard.constants";
-import { useMemo } from "react";
 import "./priceCard.styles.css";
+import { PriceCardTypes } from "@/app/(home)/components/OurPrice/PriceCard/priceCard.types";
 
-export const PriceCards = () => {
-  const cards = useMemo(() => Object.values(PRICECARDMENU), []);
+export const PriceCards = ({
+  priceCards,
+}: {
+  priceCards: PriceCardTypes[];
+}) => {
   return (
     <Box className={"row"}>
-      {cards.map((card, index) => (
+      {priceCards.map((card, index) => (
         <Box key={index} className={"itemContainer"}>
           <Box className={"card"}>
             <Box className={"front"}>

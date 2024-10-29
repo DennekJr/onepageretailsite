@@ -27,7 +27,6 @@ export const OurTeam = () => {
         "min-[992px]:max-w-[960px] min-[768px]:max-w-[720px] min-[576px]:max-w-[540px] pt-[120px] w-full px-[15px] mx-auto"
       }
     >
-      {" "}
       <Heading
         title={data.title}
         blueTitle={data.blueTitle}

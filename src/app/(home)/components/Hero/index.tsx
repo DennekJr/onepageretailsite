@@ -14,7 +14,6 @@ export const Hero = () => {
   const [data, setData] = useState<HeroData>();
   useEffect(() => {
     getComponentData("hero").then((componentData) => {
-      console.log("hero", componentData);
       setData(componentData.data);
     });
   }, []);

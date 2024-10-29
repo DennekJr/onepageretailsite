@@ -27,7 +27,7 @@ export const AboutUs = () => {
           <Box className={"imageContainer"}>
             <Box className={"aboutImage"}>
               <Image
-                alt={data.image.title}
+                alt={"about us"}
                 className={"imgFluid"}
                 src={"/images/about-img.webp"}
                 width={423}
