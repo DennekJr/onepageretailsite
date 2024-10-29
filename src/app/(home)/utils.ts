@@ -6,13 +6,7 @@ export type ComponentDataBAseType = {
   publishedAt: string;
 };
 
-export const getComponentData = (pageComponent) => {
-  return fetch(`http://localhost:1337/api/${pageComponent}`).then((res) =>
-    res.json(),
-  );
-};
-
-export const getComponentImages = (pageComponent) => {
+export const getComponentData = (pageComponent: string) => {
   return fetch(`http://localhost:1337/api/${pageComponent}`).then((res) =>
     res.json(),
   );
