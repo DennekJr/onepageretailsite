@@ -44,7 +44,12 @@ export const WhyChooseUs = () => {
                 <Box className={"row"}>
                   {data.reasons.map((reason, index) => {
                     const IconComponent: OverridableComponent<SvgIconTypeMap> =
-                      iconMap[`${reason.icon}`];
+                      (
+                        iconMap as Record<
+                          string,
+                          OverridableComponent<SvgIconTypeMap>
+                        >
+                      )[reason.icon];
                     return (
                       <Box key={index} className={"segment items"}>
                         <Box className={"whyUsBox"}>
