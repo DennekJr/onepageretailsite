@@ -17,21 +17,24 @@
     position: relative;
     padding: 30px 0;
     background: #f9f9f9;
+    z-index: 2;
 }
 
-.counterArea::after {
+.counterArea:after {
     position: absolute;
     height: 100%;
     width: 110%;
     top: 0;
     left: -40px;
     content: '';
-    background: #f9f9f9;
+    background: #f9f9f9 !important;
     z-index: -1;
 }
 
 h2 {
     visibility: visible;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
     animation-name: fadeInUp;
 }
 
@@ -39,6 +42,7 @@ p {
     visibility: visible;
     animation-name: fadeInUp;
     font-weight: 300;
+    margin-bottom: 1rem;
 }
 
 .imageContainer {
@@ -46,6 +50,7 @@ p {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
+    z-index: 4;
 }
 
 .imgFluid {

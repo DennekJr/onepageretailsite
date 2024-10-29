@@ -3,10 +3,21 @@ import { Box } from "@mui/system";
 import { Heading } from "../../../components/SectionsContainer";
 import { useEffect, useState } from "react";
 import { FeaturesGridItem } from "../../components/features/components/FeaturesGridItem";
-import { getComponentData } from "@/app/(home)/utils";
+import { ComponentDataBAseType, getComponentData } from "@/app/(home)/utils";
+
+interface FeaturesData extends ComponentDataBAseType {
+  title: string;
+  subtitle: string;
+  blueTitle: string;
+  featureBlocks: {
+    title: string;
+    content: string;
+    icon: string;
+  }[];
+}
 
 export const Features = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState<FeaturesData>();
   useEffect(() => {
     getComponentData("feature").then((componentData) => {
       setData(componentData.data);

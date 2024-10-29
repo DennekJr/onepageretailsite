@@ -2,11 +2,23 @@
 import { Box } from "@mui/system";
 import { Heading } from "@/app/components/SectionsContainer";
 import { useEffect, useState } from "react";
-import { getComponentData } from "@/app/(home)/utils";
+import { ComponentDataBAseType, getComponentData } from "@/app/(home)/utils";
 import { ServicesGridItem } from "@/app/(home)/components/services/components/ServicesGridItem";
 
+interface ServicesType extends ComponentDataBAseType {
+  title: string;
+  blueTitle: string;
+  content: string;
+  services: {
+    title: string;
+    content: string;
+    icon: string;
+    readMoreHref: string;
+  }[];
+}
+
 const Services = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState<ServicesType>();
   useEffect(() => {
     getComponentData("our-service").then((componentData) => {
       setData(componentData.data);

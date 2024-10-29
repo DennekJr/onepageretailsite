@@ -11,3 +11,9 @@ export const getComponentData = (pageComponent) => {
     res.json(),
   );
 };
+
+export const getComponentImages = (pageComponent) => {
+  return fetch(`http://localhost:1337/api/${pageComponent}`).then((res) =>
+    res.json(),
+  );
+};

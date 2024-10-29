@@ -3,10 +3,19 @@ import { Box } from "@mui/system";
 import { Heading } from "../../../components/SectionsContainer";
 import { Departments } from "../../components/CreativeWork/Departments";
 import { useEffect, useState } from "react";
-import { getComponentData } from "@/app/(home)/utils";
+import { ComponentDataBAseType, getComponentData } from "@/app/(home)/utils";
+import { DepartmentGridItemTypes } from "@/app/(home)/components/CreativeWork/Departments/DepartmentGridItem/departmentGridItem.types";
+
+interface CreativeWorkData extends ComponentDataBAseType {
+  departments: { id: string; name: string; filter: string }[];
+  employees: DepartmentGridItemTypes[];
+  title: string;
+  blueTitle: string;
+  content: string;
+}
 
 export const CreativeWork = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState<CreativeWorkData>();
   useEffect(() => {
     getComponentData("creative-work").then((componentData) => {
       console.log(componentData.data);
@@ -21,15 +30,11 @@ export const CreativeWork = () => {
       }
     >
       <Heading
-        title={"Creative"}
-        blueTitle={"Work"}
-        body={
-          "Lorem Ipsum is simply dummy text of the printing and type setting industry\n\n" +
-          "        a galley of type and scrambled it to make a type specimen book It has survived\n" +
-          "        not only five centuries."
-        }
+        title={data.title}
+        blueTitle={data.blueTitle}
+        body={data.content}
       />
-      <Departments data={data} />
+      <Departments employees={data.employees} departments={data.departments} />
     </Box>
   );
 };

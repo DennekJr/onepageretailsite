@@ -3,10 +3,18 @@ import { Box } from "@mui/system";
 import { Heading } from "../../../components/SectionsContainer";
 import { TeamGrid } from "./TeamGrid";
 import { useEffect, useState } from "react";
-import { getComponentData } from "@/app/(home)/utils";
+import { ComponentDataBAseType, getComponentData } from "@/app/(home)/utils";
+import { TeamGridTypes } from "@/app/(home)/components/OurTeam/TeamGrid/teamGrid.types";
+
+interface OurTeamData extends ComponentDataBAseType {
+  title: string;
+  content: string;
+  blueTitle: string;
+  teamMembers: TeamGridTypes[];
+}
 
 export const OurTeam = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState<OurTeamData>();
   useEffect(() => {
     getComponentData("our-team").then((componentData) => {
       setData(componentData.data);
