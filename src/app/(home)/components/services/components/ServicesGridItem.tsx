@@ -10,8 +10,9 @@ export const ServicesGridItem = ({
   item: { title: string; content: string; icon: string; readMoreHref: string };
 }) => {
   const iconMap = { ...Icons };
-  const IconComponent: OverridableComponent<SvgIconTypeMap> =
-    iconMap[`${item.icon}`];
+  const IconComponent: OverridableComponent<SvgIconTypeMap> = (
+    iconMap as Record<string, OverridableComponent<SvgIconTypeMap>>
+  )[item.icon];
   return (
     <Box className="serviceItem text-black hover:text-[#fff]]">
       <Box

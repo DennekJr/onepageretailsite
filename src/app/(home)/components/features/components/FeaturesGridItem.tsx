@@ -14,8 +14,9 @@ export const FeaturesGridItem = ({
   };
 }) => {
   const iconMap = { ...Icons };
-  const IconComponent: OverridableComponent<SvgIconTypeMap> =
-    iconMap[`${item.icon}`];
+  const IconComponent: OverridableComponent<SvgIconTypeMap> = (
+    iconMap as Record<string, OverridableComponent<SvgIconTypeMap>>
+  )[item.icon];
   return (
     <Box className="col-lg-4 min-[992px]:flex-[0_0_33.33%] min-[992px]:max-w-[33.33%] w-full relative px-[15px] text-black">
       <Box
