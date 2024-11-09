@@ -7,7 +7,7 @@ export type ComponentDataBAseType = {
 };
 
 export const getComponentData = (pageComponent: string) => {
-  return fetch(`http://localhost:1337/api/${pageComponent}`).then((res) =>
+  return fetch(`https://newworld-solutions-strapi-git-main-chidumebi-ohiris-projects.vercel.app/api/${pageComponent}`).then((res) =>
     res.json(),
   );
 };
