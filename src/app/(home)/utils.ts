@@ -7,7 +7,12 @@ export type ComponentDataBAseType = {
 };
 
 export const getComponentData = (pageComponent: string) => {
-  return fetch(`https://newworld-solutions-strapi-git-main-chidumebi-ohiris-projects.vercel.app/api/${pageComponent}`).then((res) =>
-    res.json(),
-  );
+  return fetch(
+    `https://better-wonder-b3024bd900.strapiapp.com/api/${pageComponent}`,
+    {
+      method: "GET",
+    },
+  ).then((res) => {
+    return res.json();
+  });
 };
