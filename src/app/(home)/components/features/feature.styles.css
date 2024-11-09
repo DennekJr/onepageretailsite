@@ -1,0 +1,62 @@
+.innerBox {
+    position: relative;
+    padding: 35px 20px 30px;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, .1);
+    background: #fff;
+}
+
+.innerBox:before, .innerBox:after {
+    position: absolute;
+    content: "";
+    transition: all 500ms ease;
+}
+
+.innerBox:before {
+    left: 0;
+    width: 100%;
+}
+
+.innerBox:after {
+    top: 50%;
+    left: 0;
+    height: 0;
+    width: 100%;
+}
+
+.innerBox:before {
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 50%;
+}
+
+.innerBox:before {
+    border-top: 1px solid #02a2c4;
+    border-bottom: 1px solid #02a2c4;
+}
+
+.innerBox:hover:before {
+    left: 0;
+    width: 100%;
+}
+
+.innerBox:hover:after {
+    top: 0;
+    height: 100%;
+}
+
+.innerBox:after {
+    border-left: 1px solid #02a2c4;
+    border-right: 1px solid #02a2c4;
+}
+
+.iconComponent {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: 400;
+    color: #02a2c4;
+}

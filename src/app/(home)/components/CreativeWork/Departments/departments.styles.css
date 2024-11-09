@@ -1,0 +1,57 @@
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.departmentBarRow {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.departmentsGrid,
+.departmentBarRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.departmentsNavGroup {
+    margin-bottom: 40px !important;
+    background: #ffffff;
+    padding: 5px 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    width: fit-content;
+}
+
+.departmentsNavGroup button {
+    border: 0;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+    color: #666;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in
+}
+
+.departmentsNavGroup button:hover {
+    color: #ffffff;
+    background: #02a2c4;
+}
+
+.departmentsGrid {
+    display: grid !important;
+    position: relative;
+}

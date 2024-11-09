@@ -1,0 +1,81 @@
+.slider::before {
+    background: #383f50;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.93;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.slider {
+    background: url('/images/banner.webp') no-repeat fixed center center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: 9;
+}
+
+.heroheroContainer {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.slider .heroContent {
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider h1 {
+    font-size: 65px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+.slider p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    margin: 0 0 30px;
+}
+
+.slider .btn-color {
+    box-shadow: 3px 3px 51px 0 rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    padding: 15px 50px;
+    border-radius: 50px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.slider .btn-color {
+    background: linear-gradient(135deg, rgba(2, 166, 199, 1) 0%, rgba(3, 127, 152, 1) 100%);
+}
+
+@media (min-width: 992px) {
+    .heroContainer {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 768px) {
+    .heroContainer {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 576px) {
+    .heroContainer {
+        max-width: 540px;
+    }
+}

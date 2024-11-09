@@ -1,0 +1,164 @@
+.whyUs {
+
+}
+
+.containerFluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #313e4b;
+    margin: 0;
+}
+
+.content p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #727f8c;
+    margin: 15px 0 40px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.whyUs .left {
+    background-size: cover;
+    height: 632px;
+    background: url('/images/why-us.webp') no-repeat fixed center 50%;
+    position: relative;
+    z-index: 9;
+}
+
+.whyUs .left:before {
+    background: #2a3647;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.whyUs .right {
+    background: #f8f8f8;
+}
+
+.right h2 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #313e4b;
+    margin: 0;
+}
+
+.content {
+    padding: 80px 50px;
+}
+
+.whyUsBox {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.reasonBox {
+    background: #ffffff;
+    padding: 10px;
+    border: 1px solid #f5f5f5;
+    box-shadow: 0px 0px 22px -2px rgba(16, 80, 141, 0.19);
+}
+
+.reasonBox h3 {
+    font-size: 16px;
+    color: #313e4b;
+    font-weight: 500;
+    margin: 0 0 0 20px;
+}
+
+.reasonBox:before {
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 50%;
+    border-top: 1px solid #02a2c4;
+    border-bottom: 1px solid #02a2c4;
+}
+
+.reasonBox:after {
+    top: 50%;
+    left: 0;
+    height: 0;
+    width: 100%;
+    border-left: 1px solid #02a2c4;
+    border-right: 1px solid #02a2c4;
+}
+
+.reasonBox:before,
+.reasonBox:after {
+    position: absolute;
+    content: "";
+    transition: all 500ms ease;
+}
+
+
+.reasonBox:hover:before {
+    left: 0;
+    width: 100%;
+}
+
+.reasonBox:hover:after {
+    top: 0;
+    height: 100%;
+}
+
+.reasonBox .reasonBoxIcon {
+    background: #02a2c4;
+    border: 1px solid #02a2c4;
+    border-radius: 50%;
+    font-size: 17px;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.items {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.reasonBox:hover .reasonBoxIcon {
+    border: 1px solid #02a2c4;
+    color: #02a2c4;
+}
+
+.reasonBox:hover .reasonBoxIcon {
+    background: #ffffff;
+}
+
+.segment {
+    position: relative;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .segment {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}

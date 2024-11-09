@@ -1,0 +1,89 @@
+.service-content a::before,
+.service-content a::after {
+    content: "";
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2px;
+    width: 30px;
+    background: #6e6e6e;
+    transition: .5s;
+    opacity: 1;
+}
+
+.service-content a::after {
+    left: -40px;
+    right: unset;
+    opacity: 0;
+}
+
+.singleService:hover a::before {
+    right: -60px;
+    opacity: 0;
+}
+
+.singleService:hover .service-content a::after {
+    left: 0;
+    opacity: 1;
+    background: #fff;
+}
+
+.singleService:hover .service-content a {
+    padding-left: 50px;
+    color: #fff;
+}
+
+.service-content a {
+    color: #212529;
+    position: relative;
+    transition: .5s;
+}
+
+
+.services-icon,
+.service-content h5,
+.service-content p {
+    transition: .3s;
+}
+
+
+.singleService:hover h5,
+.singleService:hover p {
+    color: #fff;
+}
+
+.singleService:hover .services-icon {
+    color: #02a2c4;
+    background: #fff;
+}
+
+.serviceItem {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.singleService {
+    transition: .3s;
+    padding: 60px 40px;
+    background: #f8f8f8;
+    margin: 40px 0 0;
+    /*flex: 0 0 50%;*/
+    /*max-width: 50%;*/
+}
+
+@media (min-width: 992px) {
+    .serviceItem {
+        flex: 0 0 33.333333% !important;
+        max-width: 33.333333% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .serviceItem {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}

@@ -1,0 +1,10 @@
+.footerContainer {
+    background: #232834;
+    padding: 40px 0;
+}
+
+@media (min-width: 992px) {
+    .footerContainer .container {
+        max-width: 960px;
+    }
+}

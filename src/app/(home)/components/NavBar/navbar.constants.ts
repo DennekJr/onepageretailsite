@@ -1,5 +1,4 @@
 import { NavBarItem } from "./navbar.types";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const NAV_MENU: Record<string, NavBarItem> = {
   home: {
@@ -12,13 +11,6 @@ export const NAV_MENU: Record<string, NavBarItem> = {
     id: "services",
     route: "#services",
     name: "Services",
-    disabled: false,
-  },
-  exhibitors: {
-    id: "exhibitors",
-    route: "exhibit",
-    name: "Exhibitors",
-    icon: ExpandMoreIcon,
     disabled: false,
   },
   portfolio: {
@@ -39,31 +31,16 @@ export const NAV_MENU: Record<string, NavBarItem> = {
     name: "Price",
     disabled: false,
   },
-blog: {
+  blog: {
     id: "blog",
     route: "#blog",
     name: "Blog",
     disabled: false,
   },
-contact: {
+  contact: {
     id: "contact",
     route: "#contact",
     name: "Contact",
-    disabled: false,
-  },
-};
-
-export const NAV_BUTTONS: Record<string, NavBarItem> = {
-  getTicket: {
-    id: "getTicket",
-    route: "ticket",
-    name: "Get Ticket",
-    disabled: false,
-  },
-  becomeASponsor: {
-    id: "becomeASponsor",
-    route: "sponsor",
-    name: "Become A Sponsor",
     disabled: false,
   },
 };

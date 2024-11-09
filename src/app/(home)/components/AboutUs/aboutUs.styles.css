@@ -1,0 +1,104 @@
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.aboutUsRow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.counterArea {
+    position: relative;
+    padding: 30px 0;
+    background: #f9f9f9;
+    z-index: 2;
+}
+
+.counterArea:after {
+    position: absolute;
+    height: 100%;
+    width: 110%;
+    top: 0;
+    left: -40px;
+    content: '';
+    background: #f9f9f9 !important;
+    z-index: -1;
+}
+
+h2 {
+    visibility: visible;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    animation-name: fadeInUp;
+}
+
+p {
+    visibility: visible;
+    animation-name: fadeInUp;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    z-index: 4;
+}
+
+.imgFluid {
+    max-width: 95%;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.sectionHeading {
+    color: #212529 !important;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .counterArea {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .counterArea {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .imageContainer {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+}
+
