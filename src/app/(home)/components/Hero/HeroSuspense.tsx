@@ -10,12 +10,7 @@ export const HeroSuspense = () => {
           <Skeleton className={"text-[#02a2c4]"}></Skeleton>
           <Skeleton className={"bg-white"}></Skeleton>
           <Skeleton></Skeleton>
-          <Skeleton
-            href="https://themeforest.net/user/sbtechnosoft/portfolio"
-            className="btn-color"
-          >
-            Buy Now
-          </Skeleton>
+          <Skeleton className="btn-color">Buy Now</Skeleton>
         </Skeleton>
       </Skeleton>
     </section>
