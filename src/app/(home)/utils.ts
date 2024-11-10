@@ -8,7 +8,7 @@ export type ComponentDataBAseType = {
 //setup hosted strapi backend
 export const getComponentData = (pageComponent: string) => {
   return fetch(
-    `https://better-wonder-b3024bd900.strapiapp.com/api/${pageComponent}`,
+    `https://holy-nature-8ee017e73c.strapiapp.com/api/${pageComponent}`,
     {
       method: "GET",
     },
