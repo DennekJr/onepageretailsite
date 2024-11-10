@@ -4,6 +4,7 @@ import { Heading } from "@/app/components/SectionsContainer";
 import { useEffect, useState } from "react";
 import { ComponentDataBAseType, getComponentData } from "@/app/(home)/utils";
 import { ServicesGridItem } from "@/app/(home)/components/services/components/ServicesGridItem";
+import { ServicesSuspense } from "@/app/(home)/components/services/ServicesSuspense";
 
 interface ServicesType extends ComponentDataBAseType {
   title: string;
@@ -24,7 +25,7 @@ const Services = () => {
       setData(componentData.data);
     });
   }, []);
-  if (data === undefined) return;
+  if (data === undefined) return <ServicesSuspense />;
   return (
     <section className={"py-[120px] bg-[#fff]"}>
       <Box
