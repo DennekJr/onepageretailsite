@@ -4,6 +4,7 @@ import { Heading } from "../../../components/SectionsContainer";
 import { useEffect, useState } from "react";
 import { FeaturesGridItem } from "../../components/features/components/FeaturesGridItem";
 import { ComponentDataBAseType, getComponentData } from "@/app/(home)/utils";
+import { FeaturesSuspense } from "@/app/(home)/components/features/featuresSuspense";
 
 interface FeaturesData extends ComponentDataBAseType {
   title: string;
@@ -23,7 +24,7 @@ export const Features = () => {
       setData(componentData.data);
     });
   }, []);
-  if (data === undefined) return;
+  if (data === undefined) return <FeaturesSuspense />;
   return (
     <section className={"py-[120px] bg-[#f8f8f8]"}>
       <Box
